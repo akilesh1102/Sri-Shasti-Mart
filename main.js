@@ -76,8 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const overlay = card.querySelector('.product-hover-overlay');
 
     if (titleElement && overlay) {
-      const title = titleElement.innerText;
-      const message = `Hi Sri Shasti Mart, I am interested in buying the *${title}*. Could you share the price and details?`;
+      const message = `Hi Sri Shasti Mart, I would like to order some healthy products!`;
 
       const orderBtn = document.createElement('a');
       orderBtn.href = `https://wa.me/917603986646?text=${encodeURIComponent(message)}`;
