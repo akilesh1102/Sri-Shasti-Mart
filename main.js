@@ -65,20 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, observerOptions);
 
   document.querySelectorAll('.section, .product-card').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+    el.classList.add('animate-on-scroll');
     observer.observe(el);
   });
-
-  // Add visible class styles dynamically via JS (or could be in CSS)
-  // We'll trust the inline styles transition and just update them
-  const styleSheet = document.createElement("style");
-  styleSheet.innerText = `
-    .visible {
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-    }
-  `;
-  document.head.appendChild(styleSheet);
 });
