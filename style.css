@@ -167,7 +167,7 @@ img {
 
 /* Hero Section */
 .hero {
-  height: 80vh;
+  min-height: 80vh;
   background: linear-gradient(rgba(26, 60, 52, 0.9), rgba(26, 60, 52, 0.8)), url('/images/fruit-pattern-bg.jpg') center/cover repeat;
   /* Fallback or use one of the images */
   display: flex;
@@ -176,6 +176,7 @@ img {
   text-align: center;
   color: var(--white);
   padding-top: 60px;
+  padding-bottom: 60px;
   /* Offset for header */
 }
 
@@ -549,6 +550,10 @@ img {
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
+  }
+  
+  .hero {
+    padding-top: 40px;
   }
 
   .nav {
