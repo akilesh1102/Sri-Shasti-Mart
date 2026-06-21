@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   mobileBtn.addEventListener('click', () => {
     nav.classList.toggle('active');
-    
+
     // Animate burger button
     const spans = mobileBtn.querySelectorAll('span');
     if (nav.classList.contains('active')) {
@@ -74,17 +74,17 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.product-card').forEach(card => {
     const titleElement = card.querySelector('.product-title');
     const overlay = card.querySelector('.product-hover-overlay');
-    
+
     if (titleElement && overlay) {
       const title = titleElement.innerText;
       const message = `Hi Sri Shasti Mart, I am interested in buying the *${title}*. Could you share the price and details?`;
-      
+
       const orderBtn = document.createElement('a');
       orderBtn.href = `https://wa.me/917603986646?text=${encodeURIComponent(message)}`;
       orderBtn.target = '_blank';
       orderBtn.className = 'btn btn-product-order';
       orderBtn.innerHTML = '🛒 Order via WhatsApp';
-      
+
       overlay.appendChild(orderBtn);
     }
   });
